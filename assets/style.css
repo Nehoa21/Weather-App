@@ -66,11 +66,11 @@ header {
     margin-top: 10px;
 }
 
-#day-1,
-#day-2,
-#day-3,
-#day-4,
-#day-5 {
+#day1,
+#day2,
+#day3,
+#day4,
+#day5 {
     border: 2px solid var(--color3);
     border-radius: 10px;
     margin: 10px;
@@ -78,10 +78,10 @@ header {
     color: #97baa4;
 }
 
-#day-1 p,
-#day-2 p,
-#day-3 p,
-#day-4 p,
-#day-5 p {
+#day1 p,
+#day2 p,
+#day3 p,
+#day4 p,
+#day5 p {
     padding: 5px;
 }
