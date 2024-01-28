@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+    <title>Weather App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
           rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
           crossorigin="anonymous">
@@ -15,7 +15,7 @@
     <!-- Header -->
     <header id="header" class="p-3">
         <div>
-            <h1 class="col-md-6 offset-md-3">Weather Dashboard</h1>
+            <h1 class="col-md-6 offset-md-3">Weather App</h1>
         </div>
     </header>
 
@@ -28,68 +28,73 @@
             </h4>
             <form class="row">
                 <div class="my-3">
-                    <input id="city-input" class="form-control" type="search" placeholder="Enter a city name..." aria-label="Search">
+                    <input id="city-input" 
+                           class="form-control" 
+                           type="city" 
+                           placeholder="Enter a city name..." 
+                           aria-label="Search">
                 </div>
                 <div class="d-grid gap-2">
-                    <button id="search-btn" class="btn my-2 my-sm-0" type="submit">Search</button>
+                    <button id="search-btn" 
+                            class="btn my-2 my-sm-0" 
+                            type="button">Search</button>
                 </div>
             </form>
 
             <!-- Search History -->
-            <div class="search-history">
-                <p>Search History</p> 
-            </div>
+            <div id="search-history"></div>
         </div>
     
         <div id="results-box" class="col-12 col-md-9">
             
             <!-- Current Forecast -->
-            <div class="current-weather">
-                <p id="current-city">City</p>
-                <p id="current-temp">Temp (°F)</p>
-                <p id="current-wind">Wind</p>
-                <p id="current-humid">Humidity</p>
+            <div class="current-weather" hidden>
+                <p id="current-city"></p>
+                <img src="" id="current-icon"></img>
+                <p id="current-temp"></p>
+                <p id="current-wind"></p>
+                <p id="current-humid"></p>
             </div>
             
                 <!-- 5 Day Forecast -->
-            <div id="five-day-forecast" class="row">
+            <div id="five-day-forecast" class="row" hidden>
                 <h5>
                     5-Day Forecast:
                 </h5>
                 <div id="day1" class="col-6 col-md-2">
-                    <p id="day-1">Day 1</p>
-                    <p id="icon-1">Icon</p>
-                    <p id="temp-1">Temp (°F):</p>
-                    <p id="wind-1">Wind:</p>
-                    <p id="humid-1">Humidity</p>
+                    <p id="day-1"></p>
+                    <img src="" id="icon-1"></img>
+                    <p id="temp-1"></p>
+                    <p id="wind-1"></p>
+                    <p id="humid-1"></p>
                 </div>
                 <div id="day2" class="col-6 col-md-2">
-                    <p id="day-2">Day 2</p>
-                    <p id="icon-2">Icon</p>
-                    <p id="temp-2">Temp (°F):</p>
-                    <p id="wind-2">Wind:</p>
-                    <p id="humid-2">Humidity</p>
+                    <p id="day-2"></p>
+                    <img src="" id="icon-2"></img>
+                    <p id="temp-2"></p>
+                    <p id="wind-2"></p>
+                    <p id="humid-2"></p>
                 </div>
                 <div id="day3" class="col-6 col-md-2">
-                    <p id="day-3">Day 3</p>
-                    <p id="icon-3">Icon</p>
-                    <p id="temp-3">Temp (°F):</p>
-                    <p id="wind-3">Wind:</p>
-                    <p id="humid-3">Humidity</p>
+                    <p id="day-3"></p>
+                    <img src="" id="icon-3"></img>
+                    <p id="temp-3"></p>
+                    <p id="wind-3"></p>
+                    <p id="humid-3"></p>
                 </div>
                 <div id="day4" class="col-6 col-md-2">
-                    <p id="day-4">Day 4</p>
-                    <p id="icon-4">Icon</p>
-                    <p id="temp-4">Temp (°F):</p>
-                    <p id="wind-4">Wind:</p>
-                    <p id="humid-4">Humidity</p>
+                    <p id="day-4"></p>
+                    <img src="" id="icon-4"></img>
+                    <p id="temp-4"></p>
+                    <p id="wind-4"></p>
+                    <p id="humid-4"></p>
                 </div>
                 <div id="day5" class="col-6 col-md-2">
-                    <p id="day-5">Day 5</p>
-                    <p id="icon-5">Icon</p>
-                    <p id="temp-5">Temp (°F):</p>
-                    <p id="wind-5">Wind:</p>
-                    <p id="humid-5">Humidity</p>
+                    <p id="day-5"></p>
+                    <img src="" id="icon-5"></img>
+                    <p id="temp-5"></p>
+                    <p id="wind-5"></p>
+                    <p id="humid-5"></p>
                 </div>
             </div>
         </div>
