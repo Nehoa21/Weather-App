@@ -1,0 +1,87 @@
+/* All Sections */
+:root {
+    --color1: #97baa4;
+    --color2: #499360;
+    --color3: #295651;
+    --color4: #232941;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-weight: bold;
+    color: #295651;
+}
+
+/* Header Section */
+header {
+    background-color: var(--color1);
+}
+
+/* Search Section */
+.btn {
+    background-color: var(--color1);
+    color: var(--color3);
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: var(--color3);
+}
+
+.form-control {
+    border: 1px solid var(--color3);
+}
+
+/* Search History Section */
+
+
+/* Current Weather Section */
+.current-weather{
+    border: 2px solid var(--color3);
+    border-radius: 10px;
+}
+
+#current-city {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px;
+    color: var(--color3);
+}
+
+#current-temp,
+#current-wind,
+#current-humid {
+    margin: 8px;
+    color: var(--color3);
+}
+
+/* 5 Day Forecast Section */
+#five-day-forecast {
+    margin-top: 10px;
+}
+
+#day-1,
+#day-2,
+#day-3,
+#day-4,
+#day-5 {
+    border: 2px solid var(--color3);
+    border-radius: 10px;
+    margin: 10px;
+    background-color: var(--color4);
+    color: #97baa4;
+}
+
+#day-1 p,
+#day-2 p,
+#day-3 p,
+#day-4 p,
+#day-5 p {
+    padding: 5px;
+}
