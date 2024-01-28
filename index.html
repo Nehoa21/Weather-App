@@ -4,57 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
 </head>
 
 <body>
     
     <!-- Header -->
-    <header class="text-center p-3 bg-light">
+    <header id="header" class="p-3">
         <div>
-            <h1 class="col-6">Weather Dashboard</h1>
+            <h1 class="col-md-6 offset-md-3">Weather Dashboard</h1>
         </div>
     </header>
 
-    <main class="row">
+    <main class="row m-3">
              
         <!-- Search -->
-        <div class="row col-6 col-sm-3 p-3">
+        <div id="search-box" class="col-12 col-md-3">
             <h4>
                 Search for a City:
             </h4>
-            <form class="row ">
-                <input class="col-12 col-3 form-control me-2" type="search" placeholder="Enter a city name..." aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-            <!-- <div class="input-group">
-                <div class="form-outline">
-                  <input type="search" id="form1" class="form-control" />
-                  <label class="form-label" for="form1">Search</label>
+            <form class="row">
+                <div class="my-3">
+                    <input class="form-control" type="search" placeholder="Enter a city name..." aria-label="Search">
                 </div>
-                <button type="button" class="btn btn-primary">
-                  <i class="fas fa-search"></i>
-                </button>
-            </div> -->
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </div>
+            </form>
+
+            <!-- Search History -->
+            <div class="search-history">
+                <p>Search History</p> 
+            </div>
         </div>
     
-        <!-- Current Forecast -->
-        <div class="col-8 p-3">
-            City & date & temp icon, Current temp, wind, humidity
+        <div id="results-box" class="col-12 col-md-9">
+            
+            <!-- Current Forecast -->
+            <div class="current-weather">
+                <p>City</p>
+                <p>Temp (°F)</p>
+                <p>Wind</p>
+                <p>Humidity</p>
+            
+                <!-- 5 Day Forecast -->
+                <div class="row">
+                    <h5>
+                        5-Day Forecast:
+                    </h5>
+                    <div id="day-1" class="col-6 col-md-2">
+                        <p>Temp (°F):</p>
+                        <p>Wind:</p>
+                        <p>Humidity</p>
+                    </div>
+                    <div id="day-2" class="col-6 col-md-2">
+                        <p>Temp (°F):</p>
+                        <p>Wind:</p>
+                        <p>Humidity</p>
+                    </div>
+                    <div id="day-3" class="col-6 col-md-2">
+                        <p>Temp (°F):</p>
+                        <p>Wind:</p>
+                        <p>Humidity</p>
+                    </div>
+                    <div id="day-4" class="col-6 col-md-2">
+                        <p>Temp (°F):</p>
+                        <p>Wind:</p>
+                        <p>Humidity</p>
+                    </div>
+                    <div id="day-5" class="col-6 col-md-2">
+                        <p>Temp (°F):</p>
+                        <p>Wind:</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+            </div>
         </div>
     
-        <!-- Search History -->
-        <div class="col-6 col-sm-3 p-3">
-            Search History 
-        </div>
-    
-        <!-- 5 Day Forecast -->
-        <div class="col-6 p-3">
-            5-day forecast
-        </div>
+        
     </main>
     
     <script src="./assets/script.jss"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+            crossorigin="anonymous"
+    ></script>
 </body>
 </html>
