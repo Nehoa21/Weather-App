@@ -14,20 +14,20 @@ const els = {
 
 // Set up 5 day forecast elements as an object in an array
 const forecastEls = [];
-for (let i = 0; i <= 5; i++) {
+for (let i = 1; i <= 5; i++) {
     forecastEls.push({
-        day: document.querySelector(`day-${i}`),
-        icon: document.querySelector(`icon-${i}`),
-        temp: document.querySelector(`temp-${i}`),
-        wind: document.querySelector(`wind-${i}`),
-        humid: document.querySelector(`humid-${i}`),
+        day: document.querySelector(`#day-${i}`),
+        icon: document.querySelector(`#icon-${i}`),
+        temp: document.querySelector(`#temp-${i}`),
+        wind: document.querySelector(`#wind-${i}`),
+        humid: document.querySelector(`#humid-${i}`),
     })
 };
 
 // Set up API key
 const apiKey = '3ba7c5db60a6f3b4a530ece291eafd0b';
 
-// Search city function
+// Search city function and save to local storage
 const handleSearch = function() {
     const city = els.cityInput.value.trim();
     if (!city) {
@@ -41,7 +41,7 @@ const handleSearch = function() {
     searchHistory();
 };
 
-// Show search history
+// Show search history from local storage and set as buttons
 const searchHistory = function() {
     const cityHistory = document.createElement('button');
     const cityName = localStorage.getItem('city');
@@ -93,14 +93,15 @@ const getForecastWeather = function(city) {
                         const dayForecast = dayjs().add(i + 1, 'day').format('MM/DD/YYYY');
                         const dataForecast = data.list[i + 1];
                         const forecastArrayElement = forecastEls[i];
-
+                        console.log(dataForecast.weather[0].icon)
+            
                         forecastArrayElement.day.innerHTML = dayForecast;
                         forecastArrayElement.icon.src = "https://openweathermap.org/img/wn/" + dataForecast.weather[0].icon + ".png";
                         forecastArrayElement.temp.innerHTML = `Temp: ${dataForecast.main.temp}°F`;
+                        forecastArrayElement.humid.innerHTML = `Humidity: ${dataForecast.main.humidity}%`;
                         forecastArrayElement.wind.innerHTML = `Wind: ${dataForecast.wind.speed} MPH`;
-                        forecastArrayElement.humid.innerHTML = `Humidity: ${dataForecast.main.humidity}%`
-                    }; 
-                });
+                      }
+                    });
             } else {
                 alert(`Error, City ${res.statusText}`);
             }
